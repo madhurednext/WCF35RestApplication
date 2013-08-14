@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRBlock.Library.BusinessObject.HCA", "HRBlock.Library.BusinessObject.HCA.csproj", "{2F7FFC2B-3AE5-4AFE-AFE1-6D1748DC199E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCAEntityService", "HCAEntityService\HCAEntityService.csproj", "{E92D53FF-48E5-4F09-8B11-8E72339820E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCAWeb", "HCAWeb\HCAWeb.csproj", "{CE667B09-997D-4D95-99BD-0D6EA7AB09B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F7FFC2B-3AE5-4AFE-AFE1-6D1748DC199E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F7FFC2B-3AE5-4AFE-AFE1-6D1748DC199E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F7FFC2B-3AE5-4AFE-AFE1-6D1748DC199E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F7FFC2B-3AE5-4AFE-AFE1-6D1748DC199E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E92D53FF-48E5-4F09-8B11-8E72339820E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E92D53FF-48E5-4F09-8B11-8E72339820E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E92D53FF-48E5-4F09-8B11-8E72339820E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E92D53FF-48E5-4F09-8B11-8E72339820E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE667B09-997D-4D95-99BD-0D6EA7AB09B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE667B09-997D-4D95-99BD-0D6EA7AB09B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE667B09-997D-4D95-99BD-0D6EA7AB09B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE667B09-997D-4D95-99BD-0D6EA7AB09B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

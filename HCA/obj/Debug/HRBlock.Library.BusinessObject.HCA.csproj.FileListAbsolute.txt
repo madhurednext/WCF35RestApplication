@@ -1,0 +1,15 @@
+C:\Projects\Automation\Library\BusinessObject\HCA\bin\Debug\HRBlock.Library.BusinessObject.HCA.dll.config
+C:\Projects\Automation\Library\BusinessObject\HCA\bin\Debug\HRBlock.Library.BusinessObject.HCA.dll
+C:\Projects\Automation\Library\BusinessObject\HCA\bin\Debug\HRBlock.Library.BusinessObject.HCA.pdb
+C:\Projects\Automation\Library\BusinessObject\HCA\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Projects\Automation\Library\BusinessObject\HCA\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Projects\Automation\Library\BusinessObject\HCA\obj\Debug\HRBlock.Library.BusinessObject.HCA.dll
+C:\Projects\Automation\Library\BusinessObject\HCA\obj\Debug\HRBlock.Library.BusinessObject.HCA.pdb
+C:\Projects\Automation\Library\BusinessObject\HCA\obj\Debug\HRBlock.Library.BusinessObject.HCA.csprojResolveAssemblyReference.cache
+C:\Hackathon\HCAApplication\HCA\bin\Debug\HRBlock.Library.BusinessObject.HCA.dll.config
+C:\Hackathon\HCAApplication\HCA\bin\Debug\HRBlock.Library.BusinessObject.HCA.dll
+C:\Hackathon\HCAApplication\HCA\bin\Debug\HRBlock.Library.BusinessObject.HCA.pdb
+C:\Hackathon\HCAApplication\HCA\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+C:\Hackathon\HCAApplication\HCA\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+C:\Hackathon\HCAApplication\HCA\obj\Debug\HRBlock.Library.BusinessObject.HCA.dll
+C:\Hackathon\HCAApplication\HCA\obj\Debug\HRBlock.Library.BusinessObject.HCA.pdb

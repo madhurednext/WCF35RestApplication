@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDiagrams>
+  <entityDiagramsDiagram dslVersion="2.0.0.0" absoluteBounds="0, 0, 13, 10.25" name="HCAEntityModel" isDefault="true">
+    <DomainModelMoniker name="/HCAEntityModel" />
+    <nestedChildShapes>
+      <classShape Id="4062a7d9-6a7f-4620-9602-7590293196cb" absoluteBounds="6.5, 5.875, 2.375, 4.070388997395832" fillColor="253, 184, 119" outlineColor="213, 71, 0">
+        <DomainClassMoniker name="/HCAEntityModel/License" />
+        <nestedChildShapes>
+          <elementListCompartment Id="67cfe128-af7b-4bc3-a6f6-f4bddfc74294" absoluteBounds="6.515, 6.385, 2.3449999999999998, 2.749308268229167" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="b33b395d-6425-4e51-aa7a-fda7d918c128" absoluteBounds="6.515, 9.1443082682291674, 2.3449999999999998, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="6c3c5d0e-234f-4a48-a4bd-79ad20ed5e60" absoluteBounds="6.515, 9.4036979166666654, 2.3449999999999998, 0.44169108072916652" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="8e801d25-23f5-4f57-bf91-fb1a89a4870a" absoluteBounds="6.375, 1, 2.5, 4.262690429687499" fillColor="253, 184, 119" outlineColor="213, 71, 0">
+        <DomainClassMoniker name="/HCAEntityModel/CarrierAssignment" />
+        <nestedChildShapes>
+          <elementListCompartment Id="46d111af-6199-4ab2-863d-d970323ad273" absoluteBounds="6.39, 1.51, 2.4699999999999998, 2.941609700520833" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="6812f75b-d96e-4aa7-a884-5b3651a3c2a1" absoluteBounds="6.39, 4.4616097005208326, 2.4699999999999998, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="157f0dec-90a5-42f3-82d2-b9a244cca3ff" absoluteBounds="6.39, 4.7209993489583324, 2.4699999999999998, 0.44169108072916696" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="ac3b3ad8-3e01-4e43-8837-7f340926e3d7" absoluteBounds="1, 1.5, 3.375, 5.6088004557291651" fillColor="253, 184, 119" outlineColor="213, 71, 0">
+        <DomainClassMoniker name="/HCAEntityModel/Candidate" />
+        <nestedChildShapes>
+          <elementListCompartment Id="bd2e786a-6517-4795-a264-95627c962889" absoluteBounds="1.015, 2.01, 3.3449999999999998, 3.9031168619791665" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="8724ab95-21c3-427d-af86-eb1464388351" absoluteBounds="1.015, 5.9231168619791665, 3.3449999999999998, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="c247160a-6ead-43c1-9fc1-95f991986317" absoluteBounds="1.015, 6.1825065104166663, 3.3449999999999998, 0.8262939453125" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <associationConnector edgePoints="[(6.5 : 6.49190022786458); (4.375 : 6.49190022786458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+        <AssociationMoniker Id="ae4153ec-ec2e-486d-9974-283396b26840" />
+        <relativeChildShapes />
+        <nodes>
+          <classShapeMoniker Id="4062a7d9-6a7f-4620-9602-7590293196cb" />
+          <classShapeMoniker Id="ac3b3ad8-3e01-4e43-8837-7f340926e3d7" />
+        </nodes>
+      </associationConnector>
+      <associationConnector edgePoints="[(6.375 : 3.38134521484375); (4.375 : 3.38134521484375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+        <AssociationMoniker Id="5f07a715-7387-4467-be62-0cc41a5f039d" />
+        <relativeChildShapes />
+        <nodes>
+          <classShapeMoniker Id="8e801d25-23f5-4f57-bf91-fb1a89a4870a" />
+          <classShapeMoniker Id="ac3b3ad8-3e01-4e43-8837-7f340926e3d7" />
+        </nodes>
+      </associationConnector>
+      <classShape Id="307955c4-1a82-484a-8cc6-f836a7622399" absoluteBounds="10.375, 3.25, 2.375, 3.685786132812499" fillColor="253, 184, 119" outlineColor="213, 71, 0">
+        <DomainClassMoniker name="/HCAEntityModel/Certification" />
+        <nestedChildShapes>
+          <elementListCompartment Id="3219b58b-9012-4782-be6a-f3217f4ed0f3" absoluteBounds="10.39, 3.76, 2.3449999999999998, 2.364705403645833" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="58ad6c52-24cd-438b-8a81-b8aded2d3cba" absoluteBounds="10.39, 6.1347054036458326, 2.3449999999999998, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="05898d99-ca0c-4221-a060-5f0adfad6873" absoluteBounds="10.39, 6.3940950520833324, 2.3449999999999998, 0.44169108072916652" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <associationConnector edgePoints="[(10.375 : 5.56884521484375); (4.375 : 5.56884521484375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+        <AssociationMoniker Id="3eaf56fe-63f9-41be-8921-d1e705b73777" />
+        <relativeChildShapes />
+        <nodes>
+          <classShapeMoniker Id="307955c4-1a82-484a-8cc6-f836a7622399" />
+          <classShapeMoniker Id="ac3b3ad8-3e01-4e43-8837-7f340926e3d7" />
+        </nodes>
+      </associationConnector>
+    </nestedChildShapes>
+  </entityDiagramsDiagram>
+</EntityDiagrams>

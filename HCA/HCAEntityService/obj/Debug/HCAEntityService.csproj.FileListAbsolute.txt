@@ -1,0 +1,9 @@
+C:\Hackathon\HCAApplication\HCA\HCAEntityService\bin\HCAEntityService.dll
+C:\Hackathon\HCAApplication\HCA\HCAEntityService\bin\HCAEntityService.pdb
+C:\Hackathon\HCAApplication\HCA\HCAEntityService\bin\HRBlock.Library.BusinessObject.HCA.dll
+C:\Hackathon\HCAApplication\HCA\HCAEntityService\bin\Telerik.OpenAccess.35.Extensions.dll
+C:\Hackathon\HCAApplication\HCA\HCAEntityService\bin\HRBlock.Library.BusinessObject.HCA.pdb
+C:\Hackathon\HCAApplication\HCA\HCAEntityService\bin\Telerik.OpenAccess.35.Extensions.xml
+C:\Hackathon\HCAApplication\HCA\HCAEntityService\obj\Debug\HCAEntityService.dll
+C:\Hackathon\HCAApplication\HCA\HCAEntityService\obj\Debug\HCAEntityService.pdb
+C:\Hackathon\HCAApplication\HCA\HCAEntityService\obj\Debug\HCAEntityService.csprojResolveAssemblyReference.cache

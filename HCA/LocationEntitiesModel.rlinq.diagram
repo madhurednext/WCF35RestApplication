@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDiagrams>
+  <entityDiagramsDiagram dslVersion="2.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LocationEntityModel" isDefault="true">
+    <DomainModelMoniker name="/LocationEntityModel" />
+  </entityDiagramsDiagram>
+  <entityDiagramsDiagram dslVersion="2.0.0.0" absoluteBounds="0, 0, 11, 8.5" diagramId="b5ea493b-051d-4eab-9ee2-46db3a2b306b" name="Diagram2" isDefault="false">
+    <DomainModelMoniker name="/LocationEntityModel" />
+    <nestedChildShapes>
+      <classShape Id="dea87bc1-0c83-4e11-9a73-010db2a9c761" absoluteBounds="0.5, 1.5, 2.625, 6.570307617187499" fillColor="253, 184, 119" outlineColor="213, 71, 0">
+        <DomainClassMoniker name="/LocationEntityModel/Location" />
+        <nestedChildShapes>
+          <elementListCompartment Id="7b99e71c-6261-4f12-b542-f8f87a8ed557" absoluteBounds="0.515, 2.01, 2.5949999999999998, 5.4415283203125" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="8929512a-1a0e-4463-8e22-8e83c60bbffa" absoluteBounds="0.515, 7.4615283203125, 2.5949999999999998, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="3179254d-b8e6-4950-a273-71ae46ab3ab6" absoluteBounds="0.515, 7.7209179687499994, 2.5949999999999998, 0.2493896484375" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+    </nestedChildShapes>
+  </entityDiagramsDiagram>
+</EntityDiagrams>

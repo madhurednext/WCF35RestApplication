@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="HCAEntityModel" namespace="HRBlock.Library.BusinessObject.HCA" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="HCAEntityModel" backend="mssql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="HRBlock.Library.BusinessObject.HCA" default="true">
+      <orm:class name="License" uniqueId="39f66279-4fd9-42bf-8a08-8c826c1d7285">
+        <orm:table name="Block_HCA_License" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="33ad094d-9fbe-49c8-a929-343624d15e29" type="System.Int32">
+          <orm:column name="Id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_candidateId" property="CandidateId" behavior="readwrite" uniqueId="8a8a36c3-87e6-47ec-a7a5-d7ca09924e26" type="System.Int32">
+          <orm:column name="CandidateId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_licenseNo" property="LicenseNo" behavior="readwrite" uniqueId="a15c67b5-d613-4072-9ccc-4037441c0a71" type="System.String">
+          <orm:column name="LicenseNo" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_state" property="State" behavior="readwrite" uniqueId="7a27b7fc-29bb-44d5-b08a-fe4e51f8b2d2" type="System.String">
+          <orm:column name="State" sql-type="nvarchar" nullable="false" length="3" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_licenseType" property="LicenseType" behavior="readwrite" uniqueId="ac112aee-0082-4ead-a11c-71d5a2990bee" type="System.String">
+          <orm:column name="LicenseType" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_dateAcquired" property="DateAcquired" behavior="readwrite" uniqueId="d1e69718-bdbd-445c-ad39-d8a70666c13c" type="System.DateTime">
+          <orm:column name="DateAcquired" sql-type="date" nullable="false" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_dateExpires" property="DateExpires" behavior="readwrite" uniqueId="5429f961-910d-4d2c-b715-32a1f4a85f36" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DateExpires" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_dateRenewed" property="DateRenewed" behavior="readwrite" uniqueId="bd5c7f53-22a5-4c47-9588-a9bea4b1de2a" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DateRenewed" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_createdById" property="CreatedById" behavior="readwrite" uniqueId="4391e38c-9611-4c58-adc4-d9d885c0f80c" type="System.Int32">
+          <orm:column name="CreatedById" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_dateCreated" property="DateCreated" behavior="readwrite" uniqueId="d01ca47f-3adf-4555-839e-76e1a2bba9bf" type="System.DateTime">
+          <orm:column name="DateCreated" sql-type="datetime" nullable="false" length="0" scale="0" has-default-value="true" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_modifiedById" property="ModifiedById" behavior="readwrite" uniqueId="cdd8acc0-6d7c-4657-83a1-03a6ee01749d" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ModifiedById" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_dateModified" property="DateModified" behavior="readwrite" uniqueId="261a7081-e3c2-4fad-90b3-5f88a9f39e73" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DateModified" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_active" property="Active" behavior="readwrite" uniqueId="ded2f9c0-a546-4a2e-886a-41283203b85e" type="System.Boolean">
+          <orm:column name="Active" sql-type="bit" nullable="false" length="0" scale="0" has-default-value="true" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_candidate" property="Candidate" behavior="readwrite" uniqueId="98b1cf83-ddec-4f01-9a50-4e05fb2ab7d0" type="HRBlock.Library.BusinessObject.HCA.Candidate">
+          <orm:reference uniqueId="ae4153ec-ec2e-486d-9974-283396b26840">
+            <orm:sharedfield name="_candidateId" target-class="HRBlock.Library.BusinessObject.HCA.Candidate" target-field="_id" />
+            <orm:constraint name="FK_Block_HCA_License_Block_HCA_Candidate" destination-table="Block_HCA_Candidate" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+      <orm:class name="CarrierAssignment" uniqueId="905e79e7-9d83-4dcb-b54e-4b33a91a95cd">
+        <orm:table name="Block_HCA_CarrierAssignment" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="69a285da-7ef0-4d19-af38-c4545e96f690" type="System.Int32">
+          <orm:column name="Id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_candidateId" property="CandidateId" behavior="readwrite" uniqueId="ee0f7919-35b1-46d2-961e-c0612bdd7554" type="System.Int32">
+          <orm:column name="CandidateId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_code" property="Code" behavior="readwrite" uniqueId="e9265a47-e313-4b74-83f6-d7cc24799e8a" type="System.String">
+          <orm:column name="Code" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_agentId" property="AgentId" behavior="readwrite" uniqueId="e199ac97-20a7-4c55-b423-0eb662a7f610" type="System.String">
+          <orm:column name="AgentId" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_productType" property="ProductType" behavior="readwrite" uniqueId="5739ea7e-90aa-463b-a570-c12fd91f23fd" type="System.String">
+          <orm:column name="ProductType" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_state" property="State" behavior="readwrite" uniqueId="be215b66-fda2-4bb7-9b7e-cbf3942bdba6" type="System.String">
+          <orm:column name="State" sql-type="nvarchar" nullable="true" length="3" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_dateAcquired" property="DateAcquired" behavior="readwrite" uniqueId="140ebbb4-eded-441d-bff9-83418658ee41" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DateAcquired" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_dateExpired" property="DateExpired" behavior="readwrite" uniqueId="2f40b24d-6dd6-4686-b919-922df379f8d0" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DateExpired" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_dateRenewed" property="DateRenewed" behavior="readwrite" uniqueId="db952253-a129-4a93-9ab1-7a745be652eb" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DateRenewed" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_createdById" property="CreatedById" behavior="readwrite" uniqueId="9eb3a1ad-2a76-4545-b079-ffafe8eb36d9" type="System.Int32">
+          <orm:column name="CreatedById" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_dateCreated" property="DateCreated" behavior="readwrite" uniqueId="7a10df25-6b38-4f3e-ba88-543a0929c398" type="System.DateTime">
+          <orm:column name="DateCreated" sql-type="datetime" nullable="false" length="0" scale="0" has-default-value="true" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_modifiedById" property="ModifiedById" behavior="readwrite" uniqueId="ab838dcf-3a02-419c-b6a0-78130942ceed" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ModifiedById" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_dateModified" property="DateModified" behavior="readwrite" uniqueId="75baa99a-b7ce-46af-bb23-1392cb6144bc" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DateModified" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_active" property="Active" behavior="readwrite" uniqueId="a9b74df9-a648-41a5-8e89-37ce7eeea27b" type="System.Boolean">
+          <orm:column name="Active" sql-type="bit" nullable="false" length="0" scale="0" has-default-value="true" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_candidate" property="Candidate" behavior="readwrite" uniqueId="68b2faf0-402e-463b-b82a-23054b4c2293" type="HRBlock.Library.BusinessObject.HCA.Candidate">
+          <orm:reference uniqueId="5f07a715-7387-4467-be62-0cc41a5f039d">
+            <orm:sharedfield name="_candidateId" target-class="HRBlock.Library.BusinessObject.HCA.Candidate" target-field="_id" />
+            <orm:constraint name="FK_Block_HCA_CarrierAssignment_Block_HCA_Candidate" destination-table="Block_HCA_Candidate" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+      <orm:class name="Candidate" uniqueId="766132d7-51cc-4581-8de1-3ba0ccc406f6">
+        <orm:table name="Block_HCA_Candidate" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="d87cbf74-786b-4907-8d22-13dd8409d7ef" type="System.Int32">
+          <orm:column name="Id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_moduleId" property="ModuleId" behavior="readwrite" uniqueId="09907de1-5424-4c37-89b2-3341fd728457" type="System.Int32">
+          <orm:column name="ModuleId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_firstName" property="FirstName" behavior="readwrite" uniqueId="a316b4af-e9c4-4583-8d34-ac14941caf16" type="System.String">
+          <orm:column name="FirstName" sql-type="nvarchar" nullable="true" length="30" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_lastName" property="LastName" behavior="readwrite" uniqueId="b88d0672-d2d3-4667-bd78-486fd0665df7" type="System.String">
+          <orm:column name="LastName" sql-type="nvarchar" nullable="true" length="30" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_email" property="Email" behavior="readwrite" uniqueId="9564fd96-5638-464a-8054-04690f4923d6" type="System.String">
+          <orm:column name="Email" sql-type="nvarchar" nullable="true" length="320" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_employeeId" property="EmployeeId" behavior="readwrite" uniqueId="278f6f8e-e634-492c-8fae-c11478addfff" type="System.String">
+          <orm:column name="EmployeeId" sql-type="nvarchar" nullable="true" length="11" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_employeeRole" property="EmployeeRole" behavior="readwrite" uniqueId="8e403384-10e6-4369-bcfa-33e286aa90b6" type="System.String">
+          <orm:column name="EmployeeRole" sql-type="nvarchar" nullable="true" length="11" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_officeId" property="OfficeId" behavior="readwrite" uniqueId="2bf9d64a-3822-4ff4-afdb-da8c8e86fc50" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OfficeId" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_deptId" property="DeptId" behavior="readwrite" uniqueId="643a6622-f31e-40ea-8fe0-22d89dfe0e49" type="System.String">
+          <orm:column name="DeptId" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_districtId" property="DistrictId" behavior="readwrite" uniqueId="21165b45-9ebf-45d5-8d9f-b3716ed3b0be" type="System.String">
+          <orm:column name="DistrictId" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_region" property="Region" behavior="readwrite" uniqueId="f6b0a34c-d686-48b4-983a-ace34048ee44" type="System.String">
+          <orm:column name="Region" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_market" property="Market" behavior="readwrite" uniqueId="1390f6e4-cb15-44b0-a333-96ee8caa2ede" type="System.String">
+          <orm:column name="Market" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_officePhoneNo" property="OfficePhoneNo" behavior="readwrite" uniqueId="36f55fc9-f3c7-4597-96ae-89732005d316" type="System.String">
+          <orm:column name="OfficePhoneNo" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_fFMUserId" property="FFMUserId" behavior="readwrite" uniqueId="e85064f8-1cdd-4650-bef2-1f7a70e6b41d" type="System.String">
+          <orm:column name="FFMUserId" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_createdById" property="CreatedById" behavior="readwrite" uniqueId="c35fb5b3-f09f-4df0-90e8-cd3898c90eac" type="System.Int32">
+          <orm:column name="CreatedById" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_dateCreated" property="DateCreated" behavior="readwrite" uniqueId="12997102-4fae-4b69-9065-547aae8b1890" type="System.DateTime">
+          <orm:column name="DateCreated" sql-type="datetime" nullable="false" length="0" scale="0" has-default-value="true" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_modifiedById" property="ModifiedById" behavior="readwrite" uniqueId="66deb0b9-a585-4ee0-813c-004d5a6eda8c" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ModifiedById" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_dateModified" property="DateModified" behavior="readwrite" uniqueId="8c3fc43a-08fc-4f9b-9422-ad39721fb5f0" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DateModified" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_active" property="Active" behavior="readwrite" uniqueId="dd2e49b4-3b18-4354-92e2-f4085a9883dc" type="System.Boolean">
+          <orm:column name="Active" sql-type="bit" nullable="false" length="0" scale="0" has-default-value="true" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_licenses" property="Licenses" behavior="readwrite" uniqueId="3724f2c2-ae2c-472c-86f0-0cd1e80cef7a" type="HRBlock.Library.BusinessObject.HCA.License">
+          <orm:collection element-class="HRBlock.Library.BusinessObject.HCA.License" inverse-field="_candidate" order-by="" uniqueId="ae4153ec-ec2e-486d-9974-283396b26840" />
+        </orm:field>
+        <orm:field name="_carrierAssignments" property="CarrierAssignments" behavior="readwrite" uniqueId="76a2ae4b-2ba7-4843-a38b-6c64524a30ff" type="HRBlock.Library.BusinessObject.HCA.CarrierAssignment">
+          <orm:collection element-class="HRBlock.Library.BusinessObject.HCA.CarrierAssignment" inverse-field="_candidate" order-by="" uniqueId="5f07a715-7387-4467-be62-0cc41a5f039d" />
+        </orm:field>
+        <orm:field name="_certifications" property="Certifications" behavior="readwrite" uniqueId="54a5aeb5-8be0-40cb-975d-0cb3d8559e14" type="HRBlock.Library.BusinessObject.HCA.Certification">
+          <orm:collection element-class="HRBlock.Library.BusinessObject.HCA.Certification" inverse-field="_candidate" order-by="" uniqueId="3eaf56fe-63f9-41be-8921-d1e705b73777" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="Certification" uniqueId="9e55ef54-e567-4cb8-82f8-7e1fc954f7a3">
+        <orm:table name="Block_HCA_Certification" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="e3ffa3ea-52ec-482a-b770-49790792e331" type="System.Int32">
+          <orm:column name="Id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_candidateId" property="CandidateId" behavior="readwrite" uniqueId="06ae1af5-76fe-40c6-a828-737db3ba72c7" type="System.Int32">
+          <orm:column name="CandidateId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_nPNId" property="NPNId" behavior="readwrite" uniqueId="326d87f5-4af8-4184-903a-178344852783" type="System.String">
+          <orm:column name="NPNId" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_dateAcquired" property="DateAcquired" behavior="readwrite" uniqueId="ef2519ef-882b-4d5a-83a7-920b1bf92cbc" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DateAcquired" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_dateExpired" property="DateExpired" behavior="readwrite" uniqueId="f1fe19bd-a070-4f5a-a123-e5222ac8c0ec" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DateExpired" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_dateRenewed" property="DateRenewed" behavior="readwrite" uniqueId="5c31266d-6c4b-4ea7-9ab1-e846f213f438" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DateRenewed" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        </orm:field>
+        <orm:field name="_createdById" property="CreatedById" behavior="readwrite" uniqueId="26d9a6f3-45f2-4715-8f74-8f712638c4a7" type="System.Int32">
+          <orm:column name="CreatedById" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_createdDate" property="CreatedDate" behavior="readwrite" uniqueId="a1a83c48-637e-42fd-ad89-9fdbbee98a45" type="System.DateTime">
+          <orm:column name="CreatedDate" sql-type="datetime" nullable="false" length="0" scale="0" has-default-value="true" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_modifiedById" property="ModifiedById" behavior="readwrite" uniqueId="ea8213eb-4cf1-4866-b1ad-3c5ed6666f55" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ModifiedById" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_dateModified" property="DateModified" behavior="readwrite" uniqueId="2755860a-15ba-43d3-8543-a61b1672bc02" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DateModified" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_active" property="Active" behavior="readwrite" uniqueId="eaf1a63e-f44d-4868-b13e-9c6544fe3c81" type="System.Boolean">
+          <orm:column name="Active" sql-type="bit" nullable="false" length="0" scale="0" has-default-value="true" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_candidate" property="Candidate" behavior="readwrite" uniqueId="d78eb63b-9d45-4aac-bd4f-2e909807c828" type="HRBlock.Library.BusinessObject.HCA.Candidate">
+          <orm:reference uniqueId="3eaf56fe-63f9-41be-8921-d1e705b73777">
+            <orm:sharedfield name="_candidateId" target-class="HRBlock.Library.BusinessObject.HCA.Candidate" target-field="_id" />
+            <orm:constraint name="FK_Block_HCA_Certification_Block_HCA_Candidate" destination-table="Block_HCA_Candidate" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="Block_HCA_License">
+        <orm:column name="Id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="CandidateId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="LicenseNo" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="State" sql-type="nvarchar" nullable="false" length="3" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="LicenseType" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DateAcquired" sql-type="date" nullable="false" length="0" scale="0" ado-type="Date" />
+        <orm:column name="DateExpires" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="DateRenewed" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="CreatedById" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="DateCreated" sql-type="datetime" nullable="false" length="0" scale="0" has-default-value="true" ado-type="DateTime" />
+        <orm:column name="ModifiedById" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="DateModified" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Active" sql-type="bit" nullable="false" length="0" scale="0" has-default-value="true" ado-type="Bit" />
+        <orm:constraint name="FK_Block_HCA_License_Block_HCA_Candidate" destination-table="Block_HCA_Candidate">
+          <orm:column name="CandidateId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="Block_HCA_CarrierAssignment">
+        <orm:column name="Id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="CandidateId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Code" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="AgentId" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ProductType" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="State" sql-type="nvarchar" nullable="true" length="3" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DateAcquired" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="DateExpired" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="DateRenewed" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="CreatedById" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="DateCreated" sql-type="datetime" nullable="false" length="0" scale="0" has-default-value="true" ado-type="DateTime" />
+        <orm:column name="ModifiedById" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="DateModified" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Active" sql-type="bit" nullable="false" length="0" scale="0" has-default-value="true" ado-type="Bit" />
+        <orm:constraint name="FK_Block_HCA_CarrierAssignment_Block_HCA_Candidate" destination-table="Block_HCA_Candidate">
+          <orm:column name="CandidateId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="Block_HCA_Candidate">
+        <orm:column name="Id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="ModuleId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="FirstName" sql-type="nvarchar" nullable="true" length="30" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="LastName" sql-type="nvarchar" nullable="true" length="30" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="Email" sql-type="nvarchar" nullable="true" length="320" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="EmployeeId" sql-type="nvarchar" nullable="true" length="11" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="EmployeeRole" sql-type="nvarchar" nullable="true" length="11" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OfficeId" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="DeptId" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DistrictId" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="Region" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="Market" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OfficePhoneNo" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="FFMUserId" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatedById" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="DateCreated" sql-type="datetime" nullable="false" length="0" scale="0" has-default-value="true" ado-type="DateTime" />
+        <orm:column name="ModifiedById" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="DateModified" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Active" sql-type="bit" nullable="false" length="0" scale="0" has-default-value="true" ado-type="Bit" />
+      </orm:table>
+      <orm:table name="Block_HCA_Certification">
+        <orm:column name="Id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="CandidateId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="NPNId" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DateAcquired" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="DateExpired" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="DateRenewed" sql-type="date" nullable="true" length="0" scale="0" ado-type="Date" />
+        <orm:column name="CreatedById" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="CreatedDate" sql-type="datetime" nullable="false" length="0" scale="0" has-default-value="true" ado-type="DateTime" />
+        <orm:column name="ModifiedById" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="DateModified" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Active" sql-type="bit" nullable="false" length="0" scale="0" has-default-value="true" ado-type="Bit" />
+        <orm:constraint name="FK_Block_HCA_Certification_Block_HCA_Candidate" destination-table="Block_HCA_Candidate">
+          <orm:column name="CandidateId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+      <orm:source-strategy>Property</orm:source-strategy>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>HCA</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>data source=bclab-qasvr01.hrbinc.hrblock.net;initial catalog=dbDNN612;integrated security=True</AppConfigConnectionString>
+    <NamingSettings>
+      <ClassRules>
+        <RemovePrefix>Block_HCA</RemovePrefix>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+        <RemoveUnderscore>true</RemoveUnderscore>
+        <UnderscoreAsWordDelimiter>true</UnderscoreAsWordDelimiter>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <OutputProjectName>HRBlock.Library.BusinessObject.HCA</OutputProjectName>
+      <OutputProjectFolder>HCA\</OutputProjectFolder>
+      <OutputPath>HCA\</OutputPath>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MsSql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="39f66279-4fd9-42bf-8a08-8c826c1d7285" name="License" namespace="HRBlock.Library.BusinessObject.HCA" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="33ad094d-9fbe-49c8-a929-343624d15e29" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="ded2f9c0-a546-4a2e-886a-41283203b85e" name="Active" type="Boolean" label="Active : Boolean" kind="Persistent" fieldName="_active" />
+      <Property Id="8a8a36c3-87e6-47ec-a7a5-d7ca09924e26" name="CandidateId" type="Int32" label="CandidateId : Int32" kind="Persistent" fieldName="_candidateId" />
+      <Property Id="4391e38c-9611-4c58-adc4-d9d885c0f80c" name="CreatedById" type="Int32" label="CreatedById : Int32" kind="Persistent" fieldName="_createdById" />
+      <Property Id="d1e69718-bdbd-445c-ad39-d8a70666c13c" name="DateAcquired" type="DateTime" label="DateAcquired : DateTime" kind="Persistent" fieldName="_dateAcquired" />
+      <Property Id="d01ca47f-3adf-4555-839e-76e1a2bba9bf" name="DateCreated" type="DateTime" label="DateCreated : DateTime" kind="Persistent" fieldName="_dateCreated" />
+      <Property Id="5429f961-910d-4d2c-b715-32a1f4a85f36" name="DateExpires" type="DateTime" label="DateExpires : DateTime" nullable="true" kind="Persistent" fieldName="_dateExpires" />
+      <Property Id="261a7081-e3c2-4fad-90b3-5f88a9f39e73" name="DateModified" type="DateTime" label="DateModified : DateTime" nullable="true" kind="Persistent" fieldName="_dateModified" />
+      <Property Id="bd5c7f53-22a5-4c47-9588-a9bea4b1de2a" name="DateRenewed" type="DateTime" label="DateRenewed : DateTime" nullable="true" kind="Persistent" fieldName="_dateRenewed" />
+      <Property Id="a15c67b5-d613-4072-9ccc-4037441c0a71" name="LicenseNo" label="LicenseNo : String" kind="Persistent" fieldName="_licenseNo" />
+      <Property Id="ac112aee-0082-4ead-a11c-71d5a2990bee" name="LicenseType" label="LicenseType : String" kind="Persistent" fieldName="_licenseType" />
+      <Property Id="cdd8acc0-6d7c-4657-83a1-03a6ee01749d" name="ModifiedById" type="Int32" label="ModifiedById : Int32" nullable="true" kind="Persistent" fieldName="_modifiedById" />
+      <Property Id="7a27b7fc-29bb-44d5-b08a-fe4e51f8b2d2" name="State" label="State : String" kind="Persistent" fieldName="_state" />
+      <AssociationTargets>
+        <Association Id="ae4153ec-ec2e-486d-9974-283396b26840" SourceMultiplicity="One" name="LicenseHasCandidate">
+          <DomainClassMoniker name="/HCAEntityModel/Candidate" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="5e2fa0e3-e1ba-4e84-b292-0c7eb488f3b2">
+              <NavigationalPropertyMoniker name="/HCAEntityModel/Candidate/Licenses" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="ff73261a-302f-4b62-856f-47cb4de53b7e">
+              <NavigationalPropertyMoniker name="/HCAEntityModel/License/Candidate" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="d42a6501-249a-410b-81b0-7c5d887ecddc">
+          <NavigationalProperty Id="98b1cf83-ddec-4f01-9a50-4e05fb2ab7d0" name="Candidate" type="Candidate" label="Candidate : Candidate" nullable="true" kind="Persistent" fieldName="_candidate" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="905e79e7-9d83-4dcb-b54e-4b33a91a95cd" name="CarrierAssignment" namespace="HRBlock.Library.BusinessObject.HCA" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="69a285da-7ef0-4d19-af38-c4545e96f690" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="a9b74df9-a648-41a5-8e89-37ce7eeea27b" name="Active" type="Boolean" label="Active : Boolean" kind="Persistent" fieldName="_active" />
+      <Property Id="e199ac97-20a7-4c55-b423-0eb662a7f610" name="AgentId" label="AgentId : String" kind="Persistent" fieldName="_agentId" />
+      <Property Id="ee0f7919-35b1-46d2-961e-c0612bdd7554" name="CandidateId" type="Int32" label="CandidateId : Int32" kind="Persistent" fieldName="_candidateId" />
+      <Property Id="e9265a47-e313-4b74-83f6-d7cc24799e8a" name="Code" label="Code : String" kind="Persistent" fieldName="_code" />
+      <Property Id="9eb3a1ad-2a76-4545-b079-ffafe8eb36d9" name="CreatedById" type="Int32" label="CreatedById : Int32" kind="Persistent" fieldName="_createdById" />
+      <Property Id="140ebbb4-eded-441d-bff9-83418658ee41" name="DateAcquired" type="DateTime" label="DateAcquired : DateTime" nullable="true" kind="Persistent" fieldName="_dateAcquired" />
+      <Property Id="7a10df25-6b38-4f3e-ba88-543a0929c398" name="DateCreated" type="DateTime" label="DateCreated : DateTime" kind="Persistent" fieldName="_dateCreated" />
+      <Property Id="2f40b24d-6dd6-4686-b919-922df379f8d0" name="DateExpired" type="DateTime" label="DateExpired : DateTime" nullable="true" kind="Persistent" fieldName="_dateExpired" />
+      <Property Id="75baa99a-b7ce-46af-bb23-1392cb6144bc" name="DateModified" type="DateTime" label="DateModified : DateTime" nullable="true" kind="Persistent" fieldName="_dateModified" />
+      <Property Id="db952253-a129-4a93-9ab1-7a745be652eb" name="DateRenewed" type="DateTime" label="DateRenewed : DateTime" nullable="true" kind="Persistent" fieldName="_dateRenewed" />
+      <Property Id="ab838dcf-3a02-419c-b6a0-78130942ceed" name="ModifiedById" type="Int32" label="ModifiedById : Int32" nullable="true" kind="Persistent" fieldName="_modifiedById" />
+      <Property Id="5739ea7e-90aa-463b-a570-c12fd91f23fd" name="ProductType" label="ProductType : String" kind="Persistent" fieldName="_productType" />
+      <Property Id="be215b66-fda2-4bb7-9b7e-cbf3942bdba6" name="State" label="State : String" kind="Persistent" fieldName="_state" />
+      <AssociationTargets>
+        <Association Id="5f07a715-7387-4467-be62-0cc41a5f039d" SourceMultiplicity="One" name="CarrierAssignmentHasCandidate">
+          <DomainClassMoniker name="/HCAEntityModel/Candidate" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="09af7b5e-9170-44f8-9c3b-94eea675df8b">
+              <NavigationalPropertyMoniker name="/HCAEntityModel/Candidate/CarrierAssignments" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="e5b83ac7-7332-44ec-933f-8747beaebdd7">
+              <NavigationalPropertyMoniker name="/HCAEntityModel/CarrierAssignment/Candidate" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="9e97a946-21ae-431d-92cd-27c2b05a72f9">
+          <NavigationalProperty Id="68b2faf0-402e-463b-b82a-23054b4c2293" name="Candidate" type="Candidate" label="Candidate : Candidate" nullable="true" kind="Persistent" fieldName="_candidate" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="766132d7-51cc-4581-8de1-3ba0ccc406f6" name="Candidate" namespace="HRBlock.Library.BusinessObject.HCA" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="d87cbf74-786b-4907-8d22-13dd8409d7ef" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="dd2e49b4-3b18-4354-92e2-f4085a9883dc" name="Active" type="Boolean" label="Active : Boolean" kind="Persistent" fieldName="_active" />
+      <Property Id="c35fb5b3-f09f-4df0-90e8-cd3898c90eac" name="CreatedById" type="Int32" label="CreatedById : Int32" kind="Persistent" fieldName="_createdById" />
+      <Property Id="12997102-4fae-4b69-9065-547aae8b1890" name="DateCreated" type="DateTime" label="DateCreated : DateTime" kind="Persistent" fieldName="_dateCreated" />
+      <Property Id="8c3fc43a-08fc-4f9b-9422-ad39721fb5f0" name="DateModified" type="DateTime" label="DateModified : DateTime" nullable="true" kind="Persistent" fieldName="_dateModified" />
+      <Property Id="643a6622-f31e-40ea-8fe0-22d89dfe0e49" name="DeptId" label="DeptId : String" kind="Persistent" fieldName="_deptId" />
+      <Property Id="21165b45-9ebf-45d5-8d9f-b3716ed3b0be" name="DistrictId" label="DistrictId : String" kind="Persistent" fieldName="_districtId" />
+      <Property Id="9564fd96-5638-464a-8054-04690f4923d6" name="Email" label="Email : String" kind="Persistent" fieldName="_email" />
+      <Property Id="278f6f8e-e634-492c-8fae-c11478addfff" name="EmployeeId" label="EmployeeId : String" kind="Persistent" fieldName="_employeeId" />
+      <Property Id="8e403384-10e6-4369-bcfa-33e286aa90b6" name="EmployeeRole" label="EmployeeRole : String" kind="Persistent" fieldName="_employeeRole" />
+      <Property Id="e85064f8-1cdd-4650-bef2-1f7a70e6b41d" name="FFMUserId" label="FFMUserId : String" kind="Persistent" fieldName="_fFMUserId" />
+      <Property Id="a316b4af-e9c4-4583-8d34-ac14941caf16" name="FirstName" label="FirstName : String" kind="Persistent" fieldName="_firstName" />
+      <Property Id="b88d0672-d2d3-4667-bd78-486fd0665df7" name="LastName" label="LastName : String" kind="Persistent" fieldName="_lastName" />
+      <Property Id="1390f6e4-cb15-44b0-a333-96ee8caa2ede" name="Market" label="Market : String" kind="Persistent" fieldName="_market" />
+      <Property Id="66deb0b9-a585-4ee0-813c-004d5a6eda8c" name="ModifiedById" type="Int32" label="ModifiedById : Int32" nullable="true" kind="Persistent" fieldName="_modifiedById" />
+      <Property Id="09907de1-5424-4c37-89b2-3341fd728457" name="ModuleId" type="Int32" label="ModuleId : Int32" kind="Persistent" fieldName="_moduleId" />
+      <Property Id="2bf9d64a-3822-4ff4-afdb-da8c8e86fc50" name="OfficeId" type="Int32" label="OfficeId : Int32" nullable="true" kind="Persistent" fieldName="_officeId" />
+      <Property Id="36f55fc9-f3c7-4597-96ae-89732005d316" name="OfficePhoneNo" label="OfficePhoneNo : String" kind="Persistent" fieldName="_officePhoneNo" />
+      <Property Id="f6b0a34c-d686-48b4-983a-ace34048ee44" name="Region" label="Region : String" kind="Persistent" fieldName="_region" />
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="bf12d86e-2ebe-41b7-a861-924b42ba33e1">
+          <NavigationalProperty Id="3724f2c2-ae2c-472c-86f0-0cd1e80cef7a" name="Licenses" type="IList&lt;License&gt;" label="Licenses : IList&lt;License&gt;" nullable="true" kind="Persistent" fieldName="_licenses" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="9517b39a-8ea7-4bb7-996f-6ecebed8a5f5">
+          <NavigationalProperty Id="76a2ae4b-2ba7-4843-a38b-6c64524a30ff" name="CarrierAssignments" type="IList&lt;CarrierAssignment&gt;" label="CarrierAssignments : IList&lt;CarrierAssignment&gt;" nullable="true" kind="Persistent" fieldName="_carrierAssignments" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="68aca0f2-59e2-46ef-82eb-f23998c034b7">
+          <NavigationalProperty Id="54a5aeb5-8be0-40cb-975d-0cb3d8559e14" name="Certifications" type="IList&lt;Certification&gt;" label="Certifications : IList&lt;Certification&gt;" nullable="true" kind="Persistent" fieldName="_certifications" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="9e55ef54-e567-4cb8-82f8-7e1fc954f7a3" name="Certification" namespace="HRBlock.Library.BusinessObject.HCA" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="e3ffa3ea-52ec-482a-b770-49790792e331" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="eaf1a63e-f44d-4868-b13e-9c6544fe3c81" name="Active" type="Boolean" label="Active : Boolean" kind="Persistent" fieldName="_active" />
+      <Property Id="06ae1af5-76fe-40c6-a828-737db3ba72c7" name="CandidateId" type="Int32" label="CandidateId : Int32" kind="Persistent" fieldName="_candidateId" />
+      <Property Id="26d9a6f3-45f2-4715-8f74-8f712638c4a7" name="CreatedById" type="Int32" label="CreatedById : Int32" kind="Persistent" fieldName="_createdById" />
+      <Property Id="a1a83c48-637e-42fd-ad89-9fdbbee98a45" name="CreatedDate" type="DateTime" label="CreatedDate : DateTime" kind="Persistent" fieldName="_createdDate" />
+      <Property Id="ef2519ef-882b-4d5a-83a7-920b1bf92cbc" name="DateAcquired" type="DateTime" label="DateAcquired : DateTime" nullable="true" kind="Persistent" fieldName="_dateAcquired" />
+      <Property Id="f1fe19bd-a070-4f5a-a123-e5222ac8c0ec" name="DateExpired" type="DateTime" label="DateExpired : DateTime" nullable="true" kind="Persistent" fieldName="_dateExpired" />
+      <Property Id="2755860a-15ba-43d3-8543-a61b1672bc02" name="DateModified" type="DateTime" label="DateModified : DateTime" nullable="true" kind="Persistent" fieldName="_dateModified" />
+      <Property Id="5c31266d-6c4b-4ea7-9ab1-e846f213f438" name="DateRenewed" type="DateTime" label="DateRenewed : DateTime" nullable="true" kind="Persistent" fieldName="_dateRenewed" />
+      <Property Id="ea8213eb-4cf1-4866-b1ad-3c5ed6666f55" name="ModifiedById" type="Int32" label="ModifiedById : Int32" nullable="true" kind="Persistent" fieldName="_modifiedById" />
+      <Property Id="326d87f5-4af8-4184-903a-178344852783" name="NPNId" label="NPNId : String" kind="Persistent" fieldName="_nPNId" />
+      <AssociationTargets>
+        <Association Id="3eaf56fe-63f9-41be-8921-d1e705b73777" SourceMultiplicity="One" name="CertificationHasCandidate">
+          <DomainClassMoniker name="/HCAEntityModel/Candidate" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="57b60471-89cd-424f-bc15-8b75e3b8b13c">
+              <NavigationalPropertyMoniker name="/HCAEntityModel/Candidate/Certifications" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="71a2d1d5-9d3c-413f-9934-5550ce66abfb">
+              <NavigationalPropertyMoniker name="/HCAEntityModel/Certification/Candidate" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="1d731d8a-8e3b-4e08-bc42-361e841c2890">
+          <NavigationalProperty Id="d78eb63b-9d45-4aac-bd4f-2e909807c828" name="Candidate" type="Candidate" label="Candidate : Candidate" nullable="true" kind="Persistent" fieldName="_candidate" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="6af058a2-a820-4dae-8478-3a3638f99070">
+      <domainContainer name="HCAEntityModel" namespace="HRBlock.Library.BusinessObject.HCA" showPropertiesCompartment="true">
+        <entitySetProperty name="Licenses" namespace="HRBlock.Library.BusinessObject.HCA" type="License" label="Licenses : IQueryable&lt;HRBlock.Library.BusinessObject.HCA.License&gt;" />
+        <entitySetProperty name="CarrierAssignments" namespace="HRBlock.Library.BusinessObject.HCA" type="CarrierAssignment" label="CarrierAssignments : IQueryable&lt;HRBlock.Library.BusinessObject.HCA.CarrierAssignment&gt;" />
+        <entitySetProperty name="Candidates" namespace="HRBlock.Library.BusinessObject.HCA" type="Candidate" label="Candidates : IQueryable&lt;HRBlock.Library.BusinessObject.HCA.Candidate&gt;" />
+        <entitySetProperty name="Certifications" namespace="HRBlock.Library.BusinessObject.HCA" type="Certification" label="Certifications : IQueryable&lt;HRBlock.Library.BusinessObject.HCA.Certification&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

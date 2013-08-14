@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="LocationEntityModel" namespace="HRBlock.Library.BusinessObject.HCA" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="LocationEntityModel" backend="mssql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="HRBlock.Library.BusinessObject.HCA" default="true">
+      <orm:class name="Location" uniqueId="ac1595e3-9b0d-4b59-9595-400d1b6a77ef">
+        <orm:table name="Locations" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="6a6f03b5-0374-4b0c-952f-33eacef824bd" type="System.Int32">
+          <orm:column nullable="false" primary-key="true" length="0" name="Id" scale="0" sql-type="int" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_divNameNo" property="DivNameNo" behavior="readwrite" uniqueId="aac51ea6-d767-4c6b-8ef5-80769d90c2e6" type="System.String">
+          <orm:column nullable="true" length="2" name="div_name_no" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_regionNameNo" property="RegionNameNo" behavior="readwrite" uniqueId="73dda000-667d-4e67-aec5-d8fb28dc8539" type="System.String">
+          <orm:column nullable="true" length="2" name="region_name_no" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_topDistrictGlDepId" property="TopDistrictGlDepId" behavior="readwrite" uniqueId="72157364-468c-49db-9678-4ec4be0c24e8" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column nullable="true" length="0" name="top_district_gl_dep_id" scale="0" sql-type="int" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_mainOfficeCd" property="MainOfficeCd" behavior="readwrite" uniqueId="e1c573f9-706e-4a84-83da-3c235db11e9d" type="System.Nullable`1[[System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column nullable="true" length="1" name="main_office_cd" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_officeGlDepId" property="OfficeGlDepId" behavior="readwrite" uniqueId="bfb0acc1-783c-49ad-b803-f37581359202" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column nullable="true" length="0" name="office_gl_dep_id" scale="0" sql-type="int" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_activeIndYN" property="ActiveIndYN" behavior="readwrite" uniqueId="f0d889df-d677-4c2d-b397-dbd307630f15" type="System.Nullable`1[[System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column nullable="true" length="1" name="active_ind_Y_N" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_taxPrepYN" property="TaxPrepYN" behavior="readwrite" uniqueId="e2268b7f-c7fd-4b70-b61c-fe672f279072" type="System.Nullable`1[[System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column nullable="true" length="1" name="tax_prep_Y_N" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_seasonalCloseYN" property="SeasonalCloseYN" behavior="readwrite" uniqueId="cae6c480-f07b-4017-9640-6a8ca7775d66" type="System.Nullable`1[[System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column nullable="true" length="1" name="seasonal_close_Y_N" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_seasonalDataReportedYN" property="SeasonalDataReportedYN" behavior="readwrite" uniqueId="ae93ad63-7062-4c20-9e00-05fb761caa35" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column nullable="true" length="0" name="seasonal_data_reported_Y_N" scale="0" sql-type="int" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_addressLine1Txt" property="AddressLine1Txt" behavior="readwrite" uniqueId="cd0c36ed-6634-4b11-ad4e-4560c27a532c" type="System.String">
+          <orm:column nullable="true" length="61" name="address_line_1_txt" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_addressLine2Txt" property="AddressLine2Txt" behavior="readwrite" uniqueId="a8e7ecb8-f2ea-4b15-badb-5aafcd207c35" type="System.String">
+          <orm:column nullable="true" length="55" name="address_line_2_txt" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_cityNm" property="CityNm" behavior="readwrite" uniqueId="c0a9b3a0-6e6d-4aca-bac5-906a658bd2d8" type="System.String">
+          <orm:column nullable="true" length="30" name="city_nm" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_stateOrProvinceCd" property="StateOrProvinceCd" behavior="readwrite" uniqueId="8e24a037-bd42-42d4-ab1d-45d27cbe5af6" type="System.String">
+          <orm:column nullable="true" length="2" name="state_or_province_cd" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_postalCd" property="PostalCd" behavior="readwrite" uniqueId="c52798fa-aabb-474f-b733-c1979bbfe800" type="System.String">
+          <orm:column nullable="true" length="12" name="postal_cd" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_countyNm" property="CountyNm" behavior="readwrite" uniqueId="ae4d6874-30a9-42c8-86c4-dff01fb9434f" type="System.String">
+          <orm:column nullable="true" length="30" name="county_nm" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_affiliateNo" property="AffiliateNo" behavior="readwrite" uniqueId="c9fc25cd-c3e5-4345-b110-4265bf77a101" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column nullable="true" length="0" name="affiliate_no" scale="0" sql-type="int" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_busPhone" property="BusPhone" behavior="readwrite" uniqueId="56611ed2-ba66-433f-811d-26f06e609755" type="System.String">
+          <orm:column nullable="true" length="65" name="bus_phone" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_fax" property="Fax" behavior="readwrite" uniqueId="1ca73c39-7c25-4c65-8807-43abcb3a86aa" type="System.String">
+          <orm:column nullable="true" length="65" name="fax" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_seasonalCloseDt" property="SeasonalCloseDt" behavior="readwrite" uniqueId="37d41907-db24-4078-b821-4c4ebe45c101" type="System.String">
+          <orm:column nullable="true" length="8" name="seasonal_close_dt" scale="0" sql-type="nvarchar" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_seasonalOpenDt" property="SeasonalOpenDt" behavior="readwrite" uniqueId="f7f3fe88-dcef-47b0-b634-d6511a6cffd6" type="System.String">
+          <orm:column nullable="true" length="8" name="seasonal_open_dt" scale="0" sql-type="nvarchar" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_openYearRoundYN" property="OpenYearRoundYN" behavior="readwrite" uniqueId="4b6f0a20-98e5-4d8b-b79d-c709962c4a1b" type="System.Nullable`1[[System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column nullable="true" length="1" name="open_year_round_Y_N" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_districtGlDepId" property="DistrictGlDepId" behavior="readwrite" uniqueId="fb77122e-7e1b-4502-88f4-7b310dbf74c2" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column nullable="true" length="0" name="district_gl_dep_id" scale="0" sql-type="int" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_districtName" property="DistrictName" behavior="readwrite" uniqueId="8a3187b8-c3f5-4dc9-8f16-2719fd5f6b1d" type="System.String">
+          <orm:column nullable="true" length="50" name="district_name" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_orgzMgrNm" property="OrgzMgrNm" behavior="readwrite" uniqueId="ee860749-c0a5-4a8c-a836-891bdc833320" type="System.String">
+          <orm:column nullable="true" length="40" name="orgz_mgr_nm" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_divisionMgrNm" property="DivisionMgrNm" behavior="readwrite" uniqueId="37bf4afb-9405-4d4d-a0ed-f7aff450ac72" type="System.String">
+          <orm:column nullable="true" length="40" name="division_mgr_nm" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_orgzOwnershipId" property="OrgzOwnershipId" behavior="readwrite" uniqueId="678e9cfb-9330-455d-a995-a655dd728a23" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column nullable="true" length="0" name="orgz_ownership_id" scale="0" sql-type="smallint" ado-type="Int16" />
+        </orm:field>
+        <orm:index name="IX_Locations">
+          <orm:columnMapping>
+            <orm:column nullable="true" length="2" name="div_name_no" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column nullable="true" length="2" name="region_name_no" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column nullable="true" length="0" name="top_district_gl_dep_id" scale="0" sql-type="int" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column nullable="true" length="0" name="office_gl_dep_id" scale="0" sql-type="int" ado-type="Int32" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="Locations">
+        <orm:column nullable="false" primary-key="true" length="0" name="Id" scale="0" sql-type="int" backend-calculated="true" ado-type="Int32" />
+        <orm:column nullable="true" length="2" name="div_name_no" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="2" name="region_name_no" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="0" name="top_district_gl_dep_id" scale="0" sql-type="int" ado-type="Int32" />
+        <orm:column nullable="true" length="1" name="main_office_cd" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="0" name="office_gl_dep_id" scale="0" sql-type="int" ado-type="Int32" />
+        <orm:column nullable="true" length="1" name="active_ind_Y_N" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="1" name="tax_prep_Y_N" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="1" name="seasonal_close_Y_N" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="0" name="seasonal_data_reported_Y_N" scale="0" sql-type="int" ado-type="Int32" />
+        <orm:column nullable="true" length="61" name="address_line_1_txt" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="55" name="address_line_2_txt" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="30" name="city_nm" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="2" name="state_or_province_cd" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="12" name="postal_cd" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="30" name="county_nm" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="0" name="affiliate_no" scale="0" sql-type="int" ado-type="Int32" />
+        <orm:column nullable="true" length="65" name="bus_phone" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="65" name="fax" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="8" name="seasonal_close_dt" scale="0" sql-type="nvarchar" ado-type="UnicodeStringVariableLength" />
+        <orm:column nullable="true" length="8" name="seasonal_open_dt" scale="0" sql-type="nvarchar" ado-type="UnicodeStringVariableLength" />
+        <orm:column nullable="true" length="1" name="open_year_round_Y_N" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="0" name="district_gl_dep_id" scale="0" sql-type="int" ado-type="Int32" />
+        <orm:column nullable="true" length="50" name="district_name" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="40" name="orgz_mgr_nm" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="40" name="division_mgr_nm" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+        <orm:column nullable="true" length="0" name="orgz_ownership_id" scale="0" sql-type="smallint" ado-type="Int16" />
+        <orm:index name="IX_Locations">
+          <orm:columnMapping>
+            <orm:column nullable="true" length="2" name="div_name_no" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column nullable="true" length="2" name="region_name_no" scale="0" sql-type="varchar" ado-type="StringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column nullable="true" length="0" name="top_district_gl_dep_id" scale="0" sql-type="int" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column nullable="true" length="0" name="office_gl_dep_id" scale="0" sql-type="int" ado-type="Int32" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="vwLocation" view="true">
+        <orm:column name="Id" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="div_name_no" sql-type="varchar" nullable="true" length="2" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="region_name_no" sql-type="varchar" nullable="true" length="2" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="top_district_gl_dep_id" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="main_office_cd" sql-type="varchar" nullable="true" length="1" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="office_gl_dep_id" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="active_ind_Y_N" sql-type="varchar" nullable="true" length="1" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="tax_prep_Y_N" sql-type="varchar" nullable="true" length="1" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="seasonal_close_Y_N" sql-type="varchar" nullable="true" length="1" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="seasonal_data_reported_Y_N" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="address_line_1_txt" sql-type="varchar" nullable="true" length="61" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="address_line_2_txt" sql-type="varchar" nullable="true" length="55" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="city_nm" sql-type="varchar" nullable="true" length="30" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="state_or_province_cd" sql-type="varchar" nullable="true" length="2" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="postal_cd" sql-type="varchar" nullable="true" length="12" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="county_nm" sql-type="varchar" nullable="true" length="30" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="affiliate_no" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="bus_phone" sql-type="varchar" nullable="true" length="65" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="fax" sql-type="varchar" nullable="true" length="65" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="seasonal_close_dt" sql-type="nvarchar" nullable="true" length="8" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="seasonal_open_dt" sql-type="nvarchar" nullable="true" length="8" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="open_year_round_Y_N" sql-type="varchar" nullable="true" length="1" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="district_gl_dep_id" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="district_name" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="orgz_mgr_nm" sql-type="varchar" nullable="true" length="40" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="division_mgr_nm" sql-type="varchar" nullable="true" length="40" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="orgz_ownership_id" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+      <orm:source-strategy>Property</orm:source-strategy>
+      <orm:remove-leading-underscore>False</orm:remove-leading-underscore>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>ELMS</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>data source=bclab-qasvr01.hrbinc.hrblock.net;initial catalog=dbELMS;integrated security=True</AppConfigConnectionString>
+    <NamingSettings>
+      <ClassRules>
+        <RemovePrefix>vw</RemovePrefix>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+        <RemoveUnderscore>true</RemoveUnderscore>
+        <UnderscoreAsWordDelimiter>true</UnderscoreAsWordDelimiter>
+      </PropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <OutputProjectName>HRBlock.Library.BusinessObject.HCA</OutputProjectName>
+      <OutputProjectFolder>ELMS\</OutputProjectFolder>
+      <OutputPath>ELMS\</OutputPath>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings>
+      <DeploymentProject>HRBlock.Library.BusinessObject.HCA</DeploymentProject>
+    </SchemaUpdateSettings>
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MsSql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+        <Runtime>
+          <ClassBehavior>ReadOnly</ClassBehavior>
+        </Runtime>
+        <Logging>
+          <MetricStoreSnapshotInterval>0</MetricStoreSnapshotInterval>
+        </Logging>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="ac1595e3-9b0d-4b59-9595-400d1b6a77ef" name="Location" namespace="HRBlock.Library.BusinessObject.HCA" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="6a6f03b5-0374-4b0c-952f-33eacef824bd" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="f0d889df-d677-4c2d-b397-dbd307630f15" name="ActiveIndYN" type="Char" label="ActiveIndYN : Char" nullable="true" kind="Persistent" fieldName="_activeIndYN" />
+      <Property Id="cd0c36ed-6634-4b11-ad4e-4560c27a532c" name="AddressLine1Txt" label="AddressLine1Txt : String" kind="Persistent" fieldName="_addressLine1Txt" />
+      <Property Id="a8e7ecb8-f2ea-4b15-badb-5aafcd207c35" name="AddressLine2Txt" label="AddressLine2Txt : String" kind="Persistent" fieldName="_addressLine2Txt" />
+      <Property Id="c9fc25cd-c3e5-4345-b110-4265bf77a101" name="AffiliateNo" type="Int32" label="AffiliateNo : Int32" nullable="true" kind="Persistent" fieldName="_affiliateNo" />
+      <Property Id="56611ed2-ba66-433f-811d-26f06e609755" name="BusPhone" label="BusPhone : String" kind="Persistent" fieldName="_busPhone" />
+      <Property Id="c0a9b3a0-6e6d-4aca-bac5-906a658bd2d8" name="CityNm" label="CityNm : String" kind="Persistent" fieldName="_cityNm" />
+      <Property Id="ae4d6874-30a9-42c8-86c4-dff01fb9434f" name="CountyNm" label="CountyNm : String" kind="Persistent" fieldName="_countyNm" />
+      <Property Id="fb77122e-7e1b-4502-88f4-7b310dbf74c2" name="DistrictGlDepId" type="Int32" label="DistrictGlDepId : Int32" nullable="true" kind="Persistent" fieldName="_districtGlDepId" />
+      <Property Id="8a3187b8-c3f5-4dc9-8f16-2719fd5f6b1d" name="DistrictName" label="DistrictName : String" kind="Persistent" fieldName="_districtName" />
+      <Property Id="37bf4afb-9405-4d4d-a0ed-f7aff450ac72" name="DivisionMgrNm" label="DivisionMgrNm : String" kind="Persistent" fieldName="_divisionMgrNm" />
+      <Property Id="aac51ea6-d767-4c6b-8ef5-80769d90c2e6" name="DivNameNo" label="DivNameNo : String" kind="Persistent" fieldName="_divNameNo" />
+      <Property Id="1ca73c39-7c25-4c65-8807-43abcb3a86aa" name="Fax" label="Fax : String" kind="Persistent" fieldName="_fax" />
+      <Property Id="e1c573f9-706e-4a84-83da-3c235db11e9d" name="MainOfficeCd" type="Char" label="MainOfficeCd : Char" nullable="true" kind="Persistent" fieldName="_mainOfficeCd" />
+      <Property Id="bfb0acc1-783c-49ad-b803-f37581359202" name="OfficeGlDepId" type="Int32" label="OfficeGlDepId : Int32" nullable="true" kind="Persistent" fieldName="_officeGlDepId" />
+      <Property Id="4b6f0a20-98e5-4d8b-b79d-c709962c4a1b" name="OpenYearRoundYN" type="Char" label="OpenYearRoundYN : Char" nullable="true" kind="Persistent" fieldName="_openYearRoundYN" />
+      <Property Id="ee860749-c0a5-4a8c-a836-891bdc833320" name="OrgzMgrNm" label="OrgzMgrNm : String" kind="Persistent" fieldName="_orgzMgrNm" />
+      <Property Id="678e9cfb-9330-455d-a995-a655dd728a23" name="OrgzOwnershipId" type="Int16" label="OrgzOwnershipId : Int16" nullable="true" kind="Persistent" fieldName="_orgzOwnershipId" />
+      <Property Id="c52798fa-aabb-474f-b733-c1979bbfe800" name="PostalCd" label="PostalCd : String" kind="Persistent" fieldName="_postalCd" />
+      <Property Id="73dda000-667d-4e67-aec5-d8fb28dc8539" name="RegionNameNo" label="RegionNameNo : String" kind="Persistent" fieldName="_regionNameNo" />
+      <Property Id="37d41907-db24-4078-b821-4c4ebe45c101" name="SeasonalCloseDt" label="SeasonalCloseDt : String" kind="Persistent" fieldName="_seasonalCloseDt" />
+      <Property Id="cae6c480-f07b-4017-9640-6a8ca7775d66" name="SeasonalCloseYN" type="Char" label="SeasonalCloseYN : Char" nullable="true" kind="Persistent" fieldName="_seasonalCloseYN" />
+      <Property Id="ae93ad63-7062-4c20-9e00-05fb761caa35" name="SeasonalDataReportedYN" type="Int32" label="SeasonalDataReportedYN : Int32" nullable="true" kind="Persistent" fieldName="_seasonalDataReportedYN" />
+      <Property Id="f7f3fe88-dcef-47b0-b634-d6511a6cffd6" name="SeasonalOpenDt" label="SeasonalOpenDt : String" kind="Persistent" fieldName="_seasonalOpenDt" />
+      <Property Id="8e24a037-bd42-42d4-ab1d-45d27cbe5af6" name="StateOrProvinceCd" label="StateOrProvinceCd : String" kind="Persistent" fieldName="_stateOrProvinceCd" />
+      <Property Id="e2268b7f-c7fd-4b70-b61c-fe672f279072" name="TaxPrepYN" type="Char" label="TaxPrepYN : Char" nullable="true" kind="Persistent" fieldName="_taxPrepYN" />
+      <Property Id="72157364-468c-49db-9678-4ec4be0c24e8" name="TopDistrictGlDepId" type="Int32" label="TopDistrictGlDepId : Int32" nullable="true" kind="Persistent" fieldName="_topDistrictGlDepId" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="38a87351-f474-457f-941d-f44ef90607ab">
+      <domainContainer name="LocationEntityModel" namespace="HRBlock.Library.BusinessObject.HCA" showPropertiesCompartment="true">
+        <entitySetProperty name="Locations" namespace="HRBlock.Library.BusinessObject.HCA" type="Location" label="Locations : IQueryable&lt;HRBlock.Library.BusinessObject.HCA.Location&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

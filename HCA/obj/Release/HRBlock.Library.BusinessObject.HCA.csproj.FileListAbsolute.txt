@@ -1,0 +1,7 @@
+C:\Projects\Automation\Library\BusinessObject\HCA\bin\Release\HRBlock.Library.BusinessObject.HCA.dll.config
+C:\Projects\Automation\Library\BusinessObject\HCA\bin\Release\HRBlock.Library.BusinessObject.HCA.dll
+C:\Projects\Automation\Library\BusinessObject\HCA\bin\Release\HRBlock.Library.BusinessObject.HCA.pdb
+C:\Projects\Automation\Library\BusinessObject\HCA\bin\Release\Telerik.OpenAccess.35.Extensions.dll
+C:\Projects\Automation\Library\BusinessObject\HCA\bin\Release\Telerik.OpenAccess.35.Extensions.xml
+C:\Projects\Automation\Library\BusinessObject\HCA\obj\Release\HRBlock.Library.BusinessObject.HCA.dll
+C:\Projects\Automation\Library\BusinessObject\HCA\obj\Release\HRBlock.Library.BusinessObject.HCA.pdb

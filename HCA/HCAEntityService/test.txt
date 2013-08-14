@@ -1,0 +1,395 @@
+﻿    #region Candidates CRUD Operations
+	
+	    /// <summary>
+	    /// Returns all candidates.
+	    /// </summary>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<CandidateDto> ReadCandidates();
+	
+	    /// <summary>
+	    /// Returns a specified amount of candidates from the given start index.
+	    /// </summary>
+	    /// <param name="startIndex">The start index.</param>
+	    /// <param name="pageSize">The returned entities count.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<CandidateDto> ReadCandidatesPaged(int startIndex, int pageSize);
+	
+	    /// <summary>
+	    /// Returns all candidates filtered by the specified filter expression and sorted by the specified sort expression.
+	    /// </summary>
+	    /// <param name="sortExpression">The sort expression.</param>
+	    /// <param name="filterExpression">The filter expression.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<CandidateDto> ReadCandidatesFiltered(string sortExpression, string filterExpression);
+	
+	    /// <summary>
+	    /// Returns a specified amount of candidates from the given start index filtered by the specified filter expression and sorted by the specified sort expression.
+	    /// </summary>
+	    /// <param name="startIndex">The start index.</param>
+	    /// <param name="pageSize">The returned entities count.</param>
+	    /// <param name="sortExpression">The sort expression.</param>
+	    /// <param name="filterExpression">The filter expression.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<CandidateDto> ReadCandidatesPagedAndFiltered(int startIndex, int pageSize, string sortExpression, string filterExpression);
+	
+	    /// <summary>
+	    /// Returns a candidate with the specified dto key.
+	    /// </summary>
+	    /// <param name="dtoKey">The specified dto key value.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    CandidateDto ReadCandidate(string dtoKey);
+	
+	    /// <summary>
+	    /// Returns all candidates count.
+	    /// </summary>
+	    /// <returns></returns>
+	    [OperationContract]
+	    int CandidatesCount();
+	
+	    /// <summary>
+	    /// Returns all candidates count filtered by the specified filter expression.
+	    /// </summary>
+	    /// <param name="filterExpression">The filter expression.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    int CandidatesCountFiltered(string filterExpression);
+	
+	    /// <summary>
+	    /// Adds a new candidate from the given dto object into the database.
+	    /// </summary>
+	    /// <param name="candidate">The dto object.</param>
+	    /// <returns>The dto key of the newly created candidate.</returns>
+	    [OperationContract]
+	    string CreateCandidate(CandidateDto candidate);
+	
+	    /// <summary>
+	    /// Updates candidate in the database from the given dto object.
+	    /// </summary>
+	    /// <param name="candidate">The dto object.</param>
+	    [OperationContract]
+	    void UpdateCandidate(CandidateDto candidate);
+	
+	    /// <summary>
+	    /// Update an existing candidates in the database from the given dto object list.
+	    /// </summary>
+	    /// <param name="candidates">The dto object list.</param>
+	    [OperationContract]
+	    void UpdateCandidates(IEnumerable<CandidateDto> candidates);
+	
+	    /// <summary>
+	    /// Deletes candidate from the database by the given dto object.
+	    /// </summary>
+	    /// <param name="candidate">The dto object.</param>
+	    [OperationContract]
+	    void DeleteCandidate(CandidateDto candidate);
+	
+	    /// <summary>
+	    /// Delete candidates from the database by the given dto object list.
+	    /// </summary>
+	    /// <param name="candidates">The dto object list.</param>
+	    [OperationContract]
+	    void DeleteCandidates(IEnumerable<CandidateDto> candidates);
+	    
+	    #endregion
+	    
+	    #region CarrierAssignments CRUD Operations
+	
+	    /// <summary>
+	    /// Returns all carrierassignments.
+	    /// </summary>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<CarrierAssignmentDto> ReadCarrierAssignments();
+	
+	    /// <summary>
+	    /// Returns a specified amount of carrierassignments from the given start index.
+	    /// </summary>
+	    /// <param name="startIndex">The start index.</param>
+	    /// <param name="pageSize">The returned entities count.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<CarrierAssignmentDto> ReadCarrierAssignmentsPaged(int startIndex, int pageSize);
+	
+	    /// <summary>
+	    /// Returns all carrierassignments filtered by the specified filter expression and sorted by the specified sort expression.
+	    /// </summary>
+	    /// <param name="sortExpression">The sort expression.</param>
+	    /// <param name="filterExpression">The filter expression.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<CarrierAssignmentDto> ReadCarrierAssignmentsFiltered(string sortExpression, string filterExpression);
+	
+	    /// <summary>
+	    /// Returns a specified amount of carrierassignments from the given start index filtered by the specified filter expression and sorted by the specified sort expression.
+	    /// </summary>
+	    /// <param name="startIndex">The start index.</param>
+	    /// <param name="pageSize">The returned entities count.</param>
+	    /// <param name="sortExpression">The sort expression.</param>
+	    /// <param name="filterExpression">The filter expression.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<CarrierAssignmentDto> ReadCarrierAssignmentsPagedAndFiltered(int startIndex, int pageSize, string sortExpression, string filterExpression);
+	
+	    /// <summary>
+	    /// Returns a carrierassignment with the specified dto key.
+	    /// </summary>
+	    /// <param name="dtoKey">The specified dto key value.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    CarrierAssignmentDto ReadCarrierAssignment(string dtoKey);
+	
+	    /// <summary>
+	    /// Returns all carrierassignments count.
+	    /// </summary>
+	    /// <returns></returns>
+	    [OperationContract]
+	    int CarrierAssignmentsCount();
+	
+	    /// <summary>
+	    /// Returns all carrierassignments count filtered by the specified filter expression.
+	    /// </summary>
+	    /// <param name="filterExpression">The filter expression.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    int CarrierAssignmentsCountFiltered(string filterExpression);
+	
+	    /// <summary>
+	    /// Adds a new carrierassignment from the given dto object into the database.
+	    /// </summary>
+	    /// <param name="carrierassignment">The dto object.</param>
+	    /// <returns>The dto key of the newly created carrierassignment.</returns>
+	    [OperationContract]
+	    string CreateCarrierAssignment(CarrierAssignmentDto carrierassignment);
+	
+	    /// <summary>
+	    /// Updates carrierassignment in the database from the given dto object.
+	    /// </summary>
+	    /// <param name="carrierassignment">The dto object.</param>
+	    [OperationContract]
+	    void UpdateCarrierAssignment(CarrierAssignmentDto carrierassignment);
+	
+	    /// <summary>
+	    /// Update an existing carrierassignments in the database from the given dto object list.
+	    /// </summary>
+	    /// <param name="carrierassignments">The dto object list.</param>
+	    [OperationContract]
+	    void UpdateCarrierAssignments(IEnumerable<CarrierAssignmentDto> carrierassignments);
+	
+	    /// <summary>
+	    /// Deletes carrierassignment from the database by the given dto object.
+	    /// </summary>
+	    /// <param name="carrierassignment">The dto object.</param>
+	    [OperationContract]
+	    void DeleteCarrierAssignment(CarrierAssignmentDto carrierassignment);
+	
+	    /// <summary>
+	    /// Delete carrierassignments from the database by the given dto object list.
+	    /// </summary>
+	    /// <param name="carrierassignments">The dto object list.</param>
+	    [OperationContract]
+	    void DeleteCarrierAssignments(IEnumerable<CarrierAssignmentDto> carrierassignments);
+	    
+	    #endregion
+	    
+	    #region Certifications CRUD Operations
+	
+	    /// <summary>
+	    /// Returns all certifications.
+	    /// </summary>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<CertificationDto> ReadCertifications();
+	
+	    /// <summary>
+	    /// Returns a specified amount of certifications from the given start index.
+	    /// </summary>
+	    /// <param name="startIndex">The start index.</param>
+	    /// <param name="pageSize">The returned entities count.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<CertificationDto> ReadCertificationsPaged(int startIndex, int pageSize);
+	
+	    /// <summary>
+	    /// Returns all certifications filtered by the specified filter expression and sorted by the specified sort expression.
+	    /// </summary>
+	    /// <param name="sortExpression">The sort expression.</param>
+	    /// <param name="filterExpression">The filter expression.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<CertificationDto> ReadCertificationsFiltered(string sortExpression, string filterExpression);
+	
+	    /// <summary>
+	    /// Returns a specified amount of certifications from the given start index filtered by the specified filter expression and sorted by the specified sort expression.
+	    /// </summary>
+	    /// <param name="startIndex">The start index.</param>
+	    /// <param name="pageSize">The returned entities count.</param>
+	    /// <param name="sortExpression">The sort expression.</param>
+	    /// <param name="filterExpression">The filter expression.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<CertificationDto> ReadCertificationsPagedAndFiltered(int startIndex, int pageSize, string sortExpression, string filterExpression);
+	
+	    /// <summary>
+	    /// Returns a certification with the specified dto key.
+	    /// </summary>
+	    /// <param name="dtoKey">The specified dto key value.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    CertificationDto ReadCertification(string dtoKey);
+	
+	    /// <summary>
+	    /// Returns all certifications count.
+	    /// </summary>
+	    /// <returns></returns>
+	    [OperationContract]
+	    int CertificationsCount();
+	
+	    /// <summary>
+	    /// Returns all certifications count filtered by the specified filter expression.
+	    /// </summary>
+	    /// <param name="filterExpression">The filter expression.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    int CertificationsCountFiltered(string filterExpression);
+	
+	    /// <summary>
+	    /// Adds a new certification from the given dto object into the database.
+	    /// </summary>
+	    /// <param name="certification">The dto object.</param>
+	    /// <returns>The dto key of the newly created certification.</returns>
+	    [OperationContract]
+	    string CreateCertification(CertificationDto certification);
+	
+	    /// <summary>
+	    /// Updates certification in the database from the given dto object.
+	    /// </summary>
+	    /// <param name="certification">The dto object.</param>
+	    [OperationContract]
+	    void UpdateCertification(CertificationDto certification);
+	
+	    /// <summary>
+	    /// Update an existing certifications in the database from the given dto object list.
+	    /// </summary>
+	    /// <param name="certifications">The dto object list.</param>
+	    [OperationContract]
+	    void UpdateCertifications(IEnumerable<CertificationDto> certifications);
+	
+	    /// <summary>
+	    /// Deletes certification from the database by the given dto object.
+	    /// </summary>
+	    /// <param name="certification">The dto object.</param>
+	    [OperationContract]
+	    void DeleteCertification(CertificationDto certification);
+	
+	    /// <summary>
+	    /// Delete certifications from the database by the given dto object list.
+	    /// </summary>
+	    /// <param name="certifications">The dto object list.</param>
+	    [OperationContract]
+	    void DeleteCertifications(IEnumerable<CertificationDto> certifications);
+	    
+	    #endregion
+	    
+	    #region Licenses CRUD Operations
+	
+	    /// <summary>
+	    /// Returns all licenses.
+	    /// </summary>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<LicenseDto> ReadLicenses();
+	
+	    /// <summary>
+	    /// Returns a specified amount of licenses from the given start index.
+	    /// </summary>
+	    /// <param name="startIndex">The start index.</param>
+	    /// <param name="pageSize">The returned entities count.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<LicenseDto> ReadLicensesPaged(int startIndex, int pageSize);
+	
+	    /// <summary>
+	    /// Returns all licenses filtered by the specified filter expression and sorted by the specified sort expression.
+	    /// </summary>
+	    /// <param name="sortExpression">The sort expression.</param>
+	    /// <param name="filterExpression">The filter expression.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<LicenseDto> ReadLicensesFiltered(string sortExpression, string filterExpression);
+	
+	    /// <summary>
+	    /// Returns a specified amount of licenses from the given start index filtered by the specified filter expression and sorted by the specified sort expression.
+	    /// </summary>
+	    /// <param name="startIndex">The start index.</param>
+	    /// <param name="pageSize">The returned entities count.</param>
+	    /// <param name="sortExpression">The sort expression.</param>
+	    /// <param name="filterExpression">The filter expression.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    IEnumerable<LicenseDto> ReadLicensesPagedAndFiltered(int startIndex, int pageSize, string sortExpression, string filterExpression);
+	
+	    /// <summary>
+	    /// Returns a license with the specified dto key.
+	    /// </summary>
+	    /// <param name="dtoKey">The specified dto key value.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    LicenseDto ReadLicense(string dtoKey);
+	
+	    /// <summary>
+	    /// Returns all licenses count.
+	    /// </summary>
+	    /// <returns></returns>
+	    [OperationContract]
+	    int LicensesCount();
+	
+	    /// <summary>
+	    /// Returns all licenses count filtered by the specified filter expression.
+	    /// </summary>
+	    /// <param name="filterExpression">The filter expression.</param>
+	    /// <returns></returns>
+	    [OperationContract]
+	    int LicensesCountFiltered(string filterExpression);
+	
+	    /// <summary>
+	    /// Adds a new license from the given dto object into the database.
+	    /// </summary>
+	    /// <param name="license">The dto object.</param>
+	    /// <returns>The dto key of the newly created license.</returns>
+	    [OperationContract]
+	    string CreateLicense(LicenseDto license);
+	
+	    /// <summary>
+	    /// Updates license in the database from the given dto object.
+	    /// </summary>
+	    /// <param name="license">The dto object.</param>
+	    [OperationContract]
+	    void UpdateLicense(LicenseDto license);
+	
+	    /// <summary>
+	    /// Update an existing licenses in the database from the given dto object list.
+	    /// </summary>
+	    /// <param name="licenses">The dto object list.</param>
+	    [OperationContract]
+	    void UpdateLicenses(IEnumerable<LicenseDto> licenses);
+	
+	    /// <summary>
+	    /// Deletes license from the database by the given dto object.
+	    /// </summary>
+	    /// <param name="license">The dto object.</param>
+	    [OperationContract]
+	    void DeleteLicense(LicenseDto license);
+	
+	    /// <summary>
+	    /// Delete licenses from the database by the given dto object list.
+	    /// </summary>
+	    /// <param name="licenses">The dto object list.</param>
+	    [OperationContract]
+	    void DeleteLicenses(IEnumerable<LicenseDto> licenses);
+	    
+	    #endregion

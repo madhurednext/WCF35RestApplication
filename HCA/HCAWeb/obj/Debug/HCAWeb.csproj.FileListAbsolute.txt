@@ -1,0 +1,5 @@
+C:\Hackathon\HCAApplication\HCA\HCAWeb\bin\HCAWeb.dll
+C:\Hackathon\HCAApplication\HCA\HCAWeb\bin\HCAWeb.pdb
+C:\Hackathon\HCAApplication\HCA\HCAWeb\obj\Debug\HCAWeb.csprojResolveAssemblyReference.cache
+C:\Hackathon\HCAApplication\HCA\HCAWeb\obj\Debug\HCAWeb.dll
+C:\Hackathon\HCAApplication\HCA\HCAWeb\obj\Debug\HCAWeb.pdb
